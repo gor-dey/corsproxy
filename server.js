@@ -117,10 +117,12 @@ process.on("unhandledRejection", (reason, promise) => {
   console.error("Unhandled Rejection at:", promise, "reason:", reason);
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.argv[2] || process.env.PORT || 8080;
 app
   .listen(PORT, () => {
-    console.log(`CORS Proxy server running on http://localhost:${PORT}`);
+    console.log(
+      `\x1b[32m✓\x1b[0m CORS Proxy server running on \x1b[36mhttp://localhost:${PORT}\x1b[0m`
+    );
   })
   .on("error", (err) => {
     console.error("Failed to start server:", err);

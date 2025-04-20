@@ -14,7 +14,13 @@ npm install
 npm start
 ```
 
-Server runs at http://localhost:8080
+Server runs at http://localhost:8080 by default.
+
+You can specify a different port:
+
+```bash
+npm start 3000
+```
 
 ## How to use
 
@@ -32,7 +38,7 @@ https://example.com/api/data
 
 ## Features
 
-- Works with GET, POST, PUT, PATCH, DELETE requests
+- Works with GET, POST, PUT, DELETE requests
 - Forwards headers, query parameters and request bodies
 - Handles JSON, text and binary responses
 - Adds CORS headers automatically
