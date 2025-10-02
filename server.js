@@ -1,5 +1,5 @@
-import Koa from "koa";
 import Router from "@koa/router";
+import Koa from "koa";
 import bodyParser from "koa-bodyparser";
 
 const app = new Koa();
@@ -123,6 +123,8 @@ app
     console.log(
       `\x1b[32m✓\x1b[0m CORS Proxy server running on \x1b[36mhttp://localhost:${PORT}\x1b[0m`
     );
+    console.log(`\n\x1b[33mUsage:\x1b[0m`);
+    console.log(`  • \x1b[36mhttp://localhost:${PORT}/<target-url>\x1b[0m`);
   })
   .on("error", (err) => {
     console.error("Failed to start server:", err);
